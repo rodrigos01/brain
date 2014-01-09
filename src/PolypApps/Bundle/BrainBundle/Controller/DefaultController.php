@@ -8,6 +8,6 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        return new \Symfony\Component\HttpFoundation\JsonResponse();
+        return new \Symfony\Component\HttpFoundation\JsonResponse("The PolypApps Brain is alive!");
     }
 }
