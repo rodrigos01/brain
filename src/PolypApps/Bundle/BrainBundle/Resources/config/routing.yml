@@ -1,0 +1,3 @@
+polyp_apps_brain_homepage:
+    pattern:  /
+    defaults: { _controller: PolypAppsBrainBundle:Default:index }

@@ -1,0 +1,4 @@
+polyp_apps_brain:
+    resource: "@PolypAppsBrainBundle/Resources/config/routing.yml"
+    prefix:   /
+

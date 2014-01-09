@@ -1,0 +1,7 @@
+parameters:
+#    polyp_apps_brain.example.class: PolypApps\Bundle\BrainBundle\Example
+
+services:
+#    polyp_apps_brain.example:
+#        class: %polyp_apps_brain.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
