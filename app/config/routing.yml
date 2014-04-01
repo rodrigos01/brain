@@ -1,3 +1,7 @@
+polyp_apps_auth:
+    resource: "@PolypAppsAuthBundle/Resources/config/routing.yml"
+    prefix:   /auth
+
 polyp_apps_brain:
     resource: "@PolypAppsBrainBundle/Resources/config/routing.yml"
     prefix:   /

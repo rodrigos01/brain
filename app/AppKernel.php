@@ -17,6 +17,7 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new PolypApps\Bundle\BrainBundle\PolypAppsBrainBundle(),
+            new PolypApps\Bundle\AuthBundle\PolypAppsAuthBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'))) {

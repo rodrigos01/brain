@@ -10,4 +10,8 @@ class DefaultController extends Controller
     {
         return new \Symfony\Component\HttpFoundation\JsonResponse("The PolypApps Brain is alive!");
     }
+    
+    public function authAction() {
+        
+    }
 }
