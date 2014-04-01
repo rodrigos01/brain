@@ -5,3 +5,6 @@ services:
 #    polyp_apps_auth.example:
 #        class: %polyp_apps_auth.example.class%
 #        arguments: [@service_id, "plain_value", %parameter%]
+
+    mysql:
+        class: PolypApps\Bundle\AuthBundle\Service\MysqlAuthWrapper
