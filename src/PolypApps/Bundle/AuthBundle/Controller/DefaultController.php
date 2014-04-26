@@ -14,10 +14,22 @@ class DefaultController extends Controller
     }
     
     public function loginAction(Request $request) {
-        $headers = $request->headers->all();
         $post = $request->request;
+        $server = $request->server;
+        $ip = $server->get("REMOTE_ADDR");
         $username = $post->get("username");
+        $password = $post->get("password");
         
-        return new JsonResponse(json_encode($headers));
+        return new JsonResponse(["username"=>$username,"password"=>$password]);
+    }
+    
+    public function loginWithServiceAction(Request $request) {
+        $post = $request->request;
+        $server = $request->server;
+        $ip = $server->get("REMOTE_ADDR");
+        $username = $post->get("serviceCode");
+        $password = $post->get("apiKey");
+        
+        return new JsonResponse(["username"=>$username,"password"=>$password]);
     }
 }

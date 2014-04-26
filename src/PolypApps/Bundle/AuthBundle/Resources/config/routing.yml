@@ -4,3 +4,8 @@ polyp_apps_auth_homepage:
 polyp_apps_auth_login:
     pattern: /login
     defaults: { _controller: PolypAppsAuthBundle:Default:login }
+    methods: [POST]
+polyp_apps_auth_login_with_service:
+    pattern: /loginwithservice
+    defaults: { _controller: PolypAppsAuthBundle:Default:loginWithService }
+    methods: [POST]
