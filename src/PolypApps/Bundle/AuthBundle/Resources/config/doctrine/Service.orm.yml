@@ -1,0 +1,34 @@
+PolypApps\Bundle\AuthBundle\Entity\Service:
+    type: entity
+    table: service
+    id:
+        id:
+            type: integer
+            nullable: false
+            unsigned: false
+            comment: ''
+            id: true
+            generator:
+                strategy: IDENTITY
+    fields:
+        code:
+            type: string
+            nullable: false
+            length: 255
+            fixed: false
+            comment: ''
+        appkey:
+            type: string
+            nullable: true
+            length: 255
+            fixed: false
+            comment: ''
+    manyToMany:
+        userid:
+            targetEntity: User
+            cascade: {  }
+            mappedBy: serviceid
+            inversedBy: null
+            joinTable: null
+            orderBy: null
+    lifecycleCallbacks: {  }
