@@ -1,0 +1,53 @@
+<?php
+
+namespace PolypApps\Bundle\AuthBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Service
+ *
+ * @ORM\Table(name="service")
+ * @ORM\Entity
+ */
+class Service
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="code", type="string", length=255, nullable=false)
+     */
+    private $code;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="appkey", type="string", length=255, nullable=true)
+     */
+    private $appkey;
+
+    /**
+     * @var \Doctrine\Common\Collections\Collection
+     *
+     * @ORM\ManyToMany(targetEntity="PolypApps\Bundle\AuthBundle\Entity\User", mappedBy="serviceid")
+     */
+    private $userid;
+
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->userid = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+}

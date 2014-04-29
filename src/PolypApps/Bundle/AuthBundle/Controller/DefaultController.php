@@ -24,7 +24,6 @@ class DefaultController extends Controller
     public function loginAction(Request $request) {
         $post = $request->request;
         $server = $request->server;
-        $ip = $server->get("REMOTE_ADDR");
         $username = $post->get("username");
         $password = $post->get("password");
         
@@ -47,7 +46,6 @@ class DefaultController extends Controller
     public function loginWithServiceAction(Request $request) {
         $post = $request->request;
         $server = $request->server;
-        $ip = $server->get("REMOTE_ADDR");
         $username = $post->get("serviceCode");
         $password = $post->get("apiKey");
         
