@@ -24,10 +24,13 @@ class DefaultController extends Controller
     public function loginAction(Request $request) {
         $post = $request->request;
         $server = $request->server;
-        $username = $post->get("username");
+        $email = $post->get("email");
         $password = $post->get("password");
         
-        return new JsonResponse(["username"=>$username,"password"=>$password]);
+        $repository = $this->getDoctrine()->getRepository('PolypAppsAuthBundle:User');
+        $user = $repository->findOneByEmail('$email');
+        
+        return new JsonResponse($user);
     }
     
     /**
